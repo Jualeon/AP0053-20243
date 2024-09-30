@@ -1,1 +1,51 @@
+class Procedimiento:
+    def __init__(self):
+        pass
 
+    def sumar(self, a, b):
+        return a + b
+
+    def restar(self, a, b):
+        return a - b
+
+    def multiplicar(self, a, b):
+        return a * b
+
+    def dividir(self, a, b):
+        if b != 0:
+            return a / b
+        else:
+            return "Error, no se puede dividir por 0"
+
+
+def main():
+    Proce = Procedimiento()
+    operaciones = {
+        "1": Proce.sumar,
+        "2": Proce.restar,
+        "3": Proce.multiplicar,
+        "4": Proce.dividir
+    }
+
+    while True:
+        print("\nOpciones:")
+        print("1. Sumar")
+        print("2. Restar")
+        print("3. Multiplicar")
+        print("4. Dividir")
+        print("5. Salir")
+
+        opcion = input("Selecciona una opción: ")
+
+        if opcion == "5":
+            print("Saliendo del programa...")
+            break
+
+        if opcion in operaciones:
+            a = float(input("Ingresa el primer número: "))
+            b = float(input("Ingresa el segundo número: "))
+
+            resultado = operaciones[opcion](a, b)
+            print(f"Resultado: {resultado}")
+        else:
+            print("Opción no válida.")
