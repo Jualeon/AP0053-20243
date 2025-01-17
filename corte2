@@ -1,0 +1,93 @@
+####lista de colores####
+
+my_list = ['rojo','azul','amarillo','naranja','violeta','verde']
+#input()
+print(my_list)
+print(type(my_list))
+print(my_list[2])
+
+print("my_list size: ", len(my_list))
+print(my_list[0:2])
+print(my_list[:2])
+
+my_list.append("Blanco")
+print(my_list)
+
+my_list.insert(3,'Negro')
+print(my_list)
+
+my_list.extend(['Marron','Gris'])
+print(my_list)
+
+print(my_list.index('azul'))
+
+my_list.remove('Marron')
+print(my_list)
+
+my_list.insert(8,'Marron')
+print(my_list)
+
+print(my_list.pop())
+size = len(my_list)
+print("size = ",size)
+
+my_list_3 = my_list * 3
+print("my_list_3: ",my_list_3)
+
+print("sort: ")
+print()
+my_listSort = my_list.sort()
+print(my_listSort)
+print(my_list)
+
+my_list.sort(reverse=True)
+print(my_list)
+
+####Lista de numeros####
+
+my_Numlist = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+print("Ordering my_Numlist: ")
+my_Numlist.sort()
+print(my_Numlist)
+
+my_Numlist.sort(reverse=True)
+print("de mayor a menor; ", my_Numlist)
+
+
+
+print("###########################")
+print("###########################")
+print("###########################")
+print("############TUPLAS#########")
+my_tupla = tuple(my_list)
+print()
+print()
+print("my_tuple: ",my_tupla)
+
+print(my_tupla[0])
+print(my_tupla[3])
+
+print("rojo" in my_tupla)
+print(my_tupla.count("rojo"))
+
+my_tupla_unitaria = ("Blanco")
+print(my_tupla_unitaria)
+print(type(my_tupla_unitaria))
+
+my_tupla_unitaria = ("Blanco",)
+print(my_tupla_unitaria)
+print(type(my_tupla_unitaria))
+
+my_tupla = 'Gaspar', 5, 8, 1999
+print(my_tupla)
+
+Nombre, Día, Mes, Año = my_tupla
+print(Nombre)
+print(Día)
+print(Mes)
+print(Año)
+print("Nombre:",Nombre, "-Día:", Día,"-Mes:", Mes, "-Año:", Año)
+
+
+my_list2 = list(my_tupla)
+print(my_list2)
