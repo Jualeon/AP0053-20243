@@ -63,5 +63,6 @@ for letra in cadena:
     print(letra)
     time.sleep(1)
 
+#primos#
 
 
